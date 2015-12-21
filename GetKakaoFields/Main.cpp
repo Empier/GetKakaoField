@@ -98,9 +98,7 @@ BOOL APIENTRY DllMain(HMODULE hModul, DWORD ul_reason_for_ca, LPVOID lpReserve)
 	{
 	case DLL_PROCESS_ATTACH:
 		AllocConsole();
-
 		freopen("CON", "w", stdout);
-
 		CreateThread(NULL, NULL, (LPTHREAD_START_ROUTINE)Start, NULL, NULL, NULL);
 
 	case DLL_THREAD_ATTACH:

@@ -87,7 +87,7 @@ void Start()
 	Sleep(100);
 	printf("Kakao: %x\n", dwKakao);
 
-	dwAddress = FindPattern(dwKakao, dwSize, (PBYTE)"\xe8\xda\x1d\x30\x00\x8b\x44\x24", "xxxxxxxx");
+	dwAddress = FindPattern(dwKakao, dwSize, (PBYTE)"\xe8\x00\x00\x00\x00\x8b\x44\x24\x20\x8b\x74\x24\x24", "x????xxxxxxxx");
 	printf("Address: %x\n", dwAddress);
 	Kakao_return_1 = dwAddress + 13;
 	Hook(Kakao_hook_1);
